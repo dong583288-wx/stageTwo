@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>引入JavaScript的方式</title>
+  <!-- 方案二 -->
+  <script src="./example.js"></script>
 </head>
 <body>
-  
+  <!-- 在HTML中,引入JavaScript一共有两种方式
+      方法一: 内嵌,意思是把JavaScript放到<script>标签内
+              特点: 把html和js写在一起,少量代码 这样方便
+      方法二: 外链,意思是把JavaScript写到以js为后缀的文件中,通过<script>标签的src属性引入
+              特点: 企业项目推荐这样做  使得结构 样式 行为三者分离
+  -->
+
+  <!-- 方法一 -->
+  <script>
+    // 输出 hello,world
+    console.log('hello,world');
+  </script>
 </body>
 </html>
