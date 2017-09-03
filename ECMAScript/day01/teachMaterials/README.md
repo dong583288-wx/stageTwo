@@ -40,9 +40,6 @@
     DOM-文档对象模型
 
       一套操作页面元素的API   DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作
-
-## JavaScript 语法
-
   > \<script>元素
 
     向HTML页面中插入JavaScript的主要方法,就是使用<script>元素,这个元素是由Netscape创造并首先实现的.
@@ -56,7 +53,7 @@
     方法二: 新建一个单独的js文件,比如 example.js 通过scr引入外部资源文件
 
       <script src="example.js"></script>
-  
+
   > 注释
 
     单行注释
@@ -70,32 +67,36 @@
        *
        */
   
+
+## JavaScript 语法
   > 变量
 
     当程序需要将值保存起来以备将来使用时，便将其赋值给一个变量，值的类型称作数据类型。
 
-    声明一个变量:
+  + 声明一个变量:
 
-      var 变量名;
+    var 变量名;
 
-    声明多个变量:
+  + 声明多个变量:
 
-      var 变量名,变量名,变量名;
+    var 变量名,变量名,变量名;
 
-    声明一个变量并赋值:
+  + 声明一个变量并赋值:
 
-      var 变量名 = 值;
+    var 变量名 = 值;
 
-    声明多个变量名并赋值:
+  + 声明多个变量名并赋值:
 
-      var 变量名 = 值,变量名 = 值,变量名 = 值; 
+    var 变量名 = 值,变量名 = 值,变量名 = 值; 
 
-    变量的命名规则(必须遵守,不遵守会报错):
+  + 变量的命名规则(必须遵守,不遵守会报错):
+
       区分大小写
       由字母、数字、下划线、$符号组成，不能以数字开头
       不能是关键字和保留字，例如：for、while。
     
-    变量的命名规范(最好遵守):
+  + 变量的命名规范(最好遵守):
+
       变量名必须有意义
       遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。例如：userName、userPassword
 
@@ -117,61 +118,79 @@
             "undefined" -- 如果这个值未定义
             "objet" -- 如果这个值是对象或null
             "function" -- 如果这个值是函数 
-## String数据类型
-  String数据类型,其实就是字符串,它表示由零个或多个字符组成的字符序列.
+  > String数据类型
 
-  > 格式: 字符串是由一对双引号(")或单引号(')引起来的字符序列
+    String数据类型,其实就是字符串,它表示由零个或多个字符组成的字符序列.
+
+  + 格式: 字符串是由一对双引号(")或单引号(')引起来的字符序列
 
     var sName = "wanlum";
     var sHobby = 'reading';
-  > 特点
+
+  + 特点
 
     JavaScript中声明的字符串是不可变的.要改变某个变量保存的值,必须销毁前一个值,才能把新的字符串赋值给变量
-  > 检测
+
+  + 检测
 
     var sMessage = 'Hello,World';
     console.log(typeof sMessage); // "string" 
 
-  > 转换
+  + 转换
 
     把一个值转换为一个字符串有两种方式:
 
     方式一: 使用toString()方法,适用于数值 布尔值 字符串 对象
 
       var intAge = 18; //数字
+
       var bFlag = true; // 布尔值
+
       var sName = 'wanlum'; // 字符串
 
       console.log(intAge.toString());
+
       console.log(bFlag.toString());
+
       console.log(sName.toString());
       
     方法二: 使用String()方法,适用于不知道值的数据类型的情况下
 
       var intAge = 18; //数字
+
       var bFlag = true; // 布尔值
+
       var sName = 'wanlum'; // 字符串
+
       var sMessage = undefined; // 未定义
+
       var oCar = null; // 空对象指针
 
       console.log(String(intAge));
+
       console.log(String(bFlag));
+
       console.log(String(sName));
+
       console.log(String(sMessage));
+
       console.log(String(oCar));
-## Number数据类型
-  Number数据类型,其实就是数字.它表示值得大小,多少等等
-  > 格式: 
+
+  > Number数据类型
+
+    Number数据类型,其实就是数字.它表示值得大小,多少等等
+
+  + 格式: 
 
     var intAge = 18;
     var floatHeight = 1.74;
 
-  > 检测
+  + 检测
 
     var intAge = 18;
     console.log(typeof intAge); // "number" 
 
-  > 按精度分类
+  + 按精度分类
 
     整型: 就是整数 
 
@@ -181,7 +200,7 @@
 
       var floatWeight = 45.4;
 
-  > 按进制分类
+  + 按进制分类
 
     十进制: 由0-9这十个数字组成
 
@@ -197,7 +216,7 @@
 
     十六进制: 由0-9及A-F且必须以0x开头  A-F可大写也可小写
   
-  > 取值范围
+  + 取值范围
 
     最大值: Number.MAX_VALUE 值为:1.7976931348623157e+308
 
@@ -206,11 +225,11 @@
     无穷大: Infinity
     无穷小: -Infinity
   
-  > 特殊数字--NaN
+  + 特殊数字--NaN
 
     NaN: 英文: not  a number 意思是: 不是一个数字
     NaN与任何值都不相当,包括它本身
-  > 数据类型转换
+  + 数据类型转换
 
     把一个值转换为数字类型总共由三种方式:
 
@@ -219,27 +238,29 @@
     方式二: 使用parsetInt()方法 该方法适用于字符串
 
     方法三: 使用parseFloat()方法 该方法适用于字符串
-## Boolean数据类型
-  Boolean数据类型,其实就是判断真或假也就是true或false,Boolean数据类型只有这两个值.
+  > Boolean数据类型
 
-  > 格式
+    Boolean数据类型,其实就是判断真或假也就是true或false,Boolean数据类型只有这两个值.
+
+  + 格式
 
     var bMarried = false;
     var bFlag = true;
 
-  > 检测
+  + 检测
 
     var bMarried = false;
+
     console.log(typeof bMarried); // "boolean" 
   
-  > 取值范围
+  + 取值范围
 
     Boolean数据类型只有两个值: 
       如果判断为真,则为true
       如果判断为假,则为false
 
-  > 转换
-
+  + 转换
+  
     把一个变量转换为布尔类型变量共有一种方式:
 
     方式一: Boolean()
@@ -247,3 +268,55 @@
       转换为true的数据有: 任何非空字符串,任何非零数值(包括无穷大) 任何对象  
 
       转换为false的数据有: 空字符串,零和NaN,null,undefined
+
+  > Undefined数据类型
+    Undefined数据类型,就是特殊的undefined.在使用var声明变量但并没有给变量值的时候,就会有一个默认值undefined
+
+  + 格式
+
+    var sName;
+
+    console.log(sName == undefined); // true
+
+  + 检测
+
+    console.log(typeof undefined); // undefined
+
+  + 取值范围
+
+    只有一个值: undefined
+
+  + 最佳实践
+
+    无论什么情况下,都没有必要把一个变量的值显式设置为undefined
+  
+  > Null数据类型
+
+    Null数据类型是第二个只有一个值的数据类型,它的值是null.  null值表示一个空对象指针,也就是一个空对象.
+
+  + 格式
+
+    var car = null;
+  
+  + 检测
+
+    console.log(typeof car); // object
+
+  + 取值范围
+
+    只有一个值: null
+
+  + 最佳实践
+
+    如果一个变量准备在将来用于保存对象,最好将该变量初始化为null
+## javaScript 操作符
+
+  > 一元运算符
+
+  > 布尔运算符
+
+  > 关系运算符
+
+  > 赋值运算符
+
+  > 运算符的优先级
