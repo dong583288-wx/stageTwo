@@ -2,37 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <script>
-    // var msg = '黑马程序猿';
-    // console.log(msg);
-    // 
-    // var msg = '我很喜欢\"黑马\'程序猿\'\"';
-    // console.log(msg);
-    // console.log(msg.length);
-    // 
-    // var n1 = 5;
-    // var n2 = 6;
-    // // 如果+ 两边是number类型的变量，执行的是数学运算的加
-    // console.log(n1 + n2);
-    // 
-    // 
-    // var s1 = 'abc';
-    // var s2 = '123';
-    // // 如果+ 两边都是string类型，拼接字符串
-    // console.log(s1 + s2);
-    // 
-    // 
-    var s1 = 'abc';
-    var num1 = 123;
-    // 如果+ 两边 一边是字符串 一边是数值类型，会先把数值类型自动转换为字符串然后再进行字符串的拼接
-    console.log(s1 + num1);
-
-    console.log('male:' + true);
-
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>字符串</title>
 </head>
 <body>
-  
+  <script>
+    // 字符串就是用双引号或单引号引起来的字符序列
+    // 比如 '黑马程序员' '123' "itcast"
+
+    var sHei = '黑马程序员';
+    var sShuzi = '123';
+    var sIt = "itcast";
+
+    console.log(sHei,sShuzi,sIt);
+
+    // 打印出  我是一匹'黑马';
+    // 打印出  有人叫马云"爸爸";
+
+    console.log('我是一匹\'黑马\'');
+    console.log('我是一匹有人叫马云\"爸爸\"');
+
+    // 获取字符串的长度
+
+    var sFamilyName = 'Vincent Willem van Gogh';
+      console.log(sFamilyName.length);
+
+    // 拼接字符串/     
+    var sName = "孙悟空";
+    var tName = "紫霞仙子";
+
+    // 请打出 孙悟空和紫霞仙子
+    console.log(sName + '和' + tName);
+
+    console.log(11+'11');
+    console.log('11'+11);
+
+    // 两边只有有一个字符串就是拼接 只有当两边都是数字才会出现算术运算
+  </script>
 </body>
 </html>
